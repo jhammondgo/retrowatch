@@ -31,7 +31,7 @@ All text above, and the first splash screen(Adafruit) must be included in any re
 #include <Wire.h>
 #include <SoftwareSerial.h>
 #include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
+#include <Adafruit_SSD1331.h>
 #include <math.h>
 #include "bitmap.h"
 
@@ -43,7 +43,7 @@ All text above, and the first splash screen(Adafruit) must be included in any re
 #define OLED_DC    8     // DC
 #define OLED_CS    10    // CS
 #define OLED_RESET 9     // RES
-Adafruit_SSD1306 display(OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
+Adafruit_SSD1331 display(OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 
 #if (SSD1306_LCDHEIGHT != 64)
 #error("Height incorrect, please fix Adafruit_SSD1306.h!");
