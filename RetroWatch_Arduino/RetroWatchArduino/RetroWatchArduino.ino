@@ -33,7 +33,7 @@ All text above, and the first splash screen(Adafruit) must be included in any re
 #include <Adafruit_SSD1306.h>
 #include <math.h>
 #include "bitmap.h"
-#include <SPI.h>
+
 ///////////////////////////////////////////////////////////////////
 //----- OLED instance
 #define OLED_RESET 9
