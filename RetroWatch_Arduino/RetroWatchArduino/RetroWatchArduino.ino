@@ -37,10 +37,10 @@ All text above, and the first splash screen(Adafruit) must be included in any re
 ///////////////////////////////////////////////////////////////////
 //----- OLED instance
 #define OLED_RESET 9
-Adafruit_SSD1331 display(OLED_RESET);
+Adafruit_SSD1306 display(OLED_RESET);
 
-#if (SSD1331_LCDHEIGHT != 64)
-#error("Height incorrect, please fix Adafruit_SSD1331.h!");
+#if (SSD1306_LCDHEIGHT != 64)
+#error("Height incorrect, please fix Adafruit_SSD1306.h!");
 #endif
 ///////////////////////////////////////////////////////////////////
 
@@ -165,7 +165,7 @@ void setup()   {
   init_msg_array();
   
   //----- by default, we'll generate the high voltage from the 3.3v line internally! (neat!)
-  display.begin(SSD1331_SWITCHCAPVCC, 0x3c);  // initialize with the I2C addr 0x3D (for the 128x64)
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3c);  // initialize with the I2C addr 0x3D (for the 128x64)
   display.display();    // show splashscreen
   delay(1000);
   drawStartUp();    // Show RetroWatch Logo
